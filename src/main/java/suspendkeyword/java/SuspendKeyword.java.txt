@@ -1,0 +1,187 @@
+package suspendkeyword.java;
+
+import java.net.URL;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.io.TextStreamsKt;
+import kotlin.jvm.functions.Function2;
+import kotlin.text.Charsets;
+import kotlinx.coroutines.BuildersKt;
+import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.DelayKt;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public final class SuspendKeyword {
+    public static final void main() {
+        BuildersKt.runBlocking$default(null, (Function2) new Function2<CoroutineScope, Continuation<? super Unit>, Object>(null) {
+            int label;
+            private /* synthetic */ Object L$0;
+
+            /*
+             * Unable to fully structure code
+             * Enabled aggressive block sorting
+             * Lifted jumps to return sites
+             */
+            @Nullable
+            public final Object invokeSuspend(@NotNull Object var1_1) {
+                var7_2 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+                switch (this.label) {
+                    case 0: {
+                        ResultKt.throwOnFailure(var1_1);
+                        $this$runBlocking = (CoroutineScope) this.L$0;
+                        url = new URL("https://kotlinlang.org");
+                        website = BuildersKt.async$default((CoroutineScope) $this$runBlocking, null, null, (Function2) new Function2<CoroutineScope, Continuation<? super String>, Object>(url, null) {
+                            int label;
+                            final /* synthetic */ URL $url;
+
+                            {
+                                this.$url = $url;
+                                super(2, $completion);
+                            }
+
+                            /*
+                             * WARNING - void declaration
+                             * Enabled force condition propagation
+                             * Lifted jumps to return sites
+                             */
+                            @Nullable
+                            public final Object invokeSuspend(@NotNull Object object) {
+                                Object object2 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+                                switch (this.label) {
+                                    case 0: {
+                                        ResultKt.throwOnFailure(object);
+                                        this.label = 1;
+                                        Object object3 = suspendkeyword.kotlin.SuspendKeywordKt.access$request(this.$url, (Continuation) this);
+                                        return object3;
+                                    }
+                                    case 1: {
+                                        void $result;
+                                        ResultKt.throwOnFailure((Object) $result);
+                                        Object object3 = $result;
+                                        return object3;
+                                    }
+                                }
+                                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                            }
+
+                            @NotNull
+                            public final Continuation<Unit> create(@Nullable Object value, @NotNull Continuation<?> $completion) {
+                                return (Continuation) new /* invalid duplicate definition of identical inner class */;
+                            }
+
+                            @Nullable
+                            public final Object invoke(@NotNull CoroutineScope p1, @Nullable Continuation<? super String> p2) {
+                                return (this.create(p1, p2)).invokeSuspend((Object) Unit.INSTANCE);
+                            }
+                        }, (int) 3, null);
+                        var5_6 = url + ": ";
+                        var6_7 = false;
+                        System.out.print((Object) var5_6);
+                        this.label = 1;
+                        v0 = website.await((Continuation) this);
+                        if (v0 == var7_2) {
+                            return var7_2;
+                        }
+                        **GOTO lbl19
+                    }
+                    case 1: {
+                        ResultKt.throwOnFailure((Object) $result);
+                        v0 = $result;
+                        lbl19:
+                        // 2 sources
+
+                        var5_6 = v0;
+                        var6_7 = false;
+                        System.out.println((Object) var5_6);
+                        return Unit.INSTANCE;
+                    }
+                }
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+
+            @NotNull
+            public final Continuation<Unit> create(@Nullable Object value, @NotNull Continuation<?> $completion) {
+                Function2<CoroutineScope, Continuation<? super Unit>, Object> function2 = new /* invalid duplicate definition of identical inner class */;
+                function2.L$0 = value;
+                return (Continuation) function2;
+            }
+
+            @Nullable
+            public final Object invoke(@NotNull CoroutineScope p1, @Nullable Continuation<? super Unit> p2) {
+                return (this.create(p1, p2)).invokeSuspend((Object) Unit.INSTANCE);
+            }
+        }, (int) 1, null);
+    }
+
+    /*
+     * Unable to fully structure code
+     * Enabled aggressive block sorting
+     * Lifted jumps to return sites
+     */
+    private static final Object request(URL var0, Continuation<? super String> var1_1) {
+        if (!(var1_1 instanceof request .1)) **GOTO lbl -1000
+        var9_2 = var1_1;
+        if ((var9_2.label & -2147483648) != 0) {
+            var9_2.label -= -2147483648;
+        } else lbl - 1000:
+        // 2 sources
+
+        {
+            $continuation = new ContinuationImpl(var1_1) {
+                Object L$0;
+                /* synthetic */ Object result;
+                int label;
+
+                @Nullable
+                public final Object invokeSuspend(@NotNull Object $result) {
+                    this.result = $result;
+                    this.label |= Integer.MIN_VALUE;
+                    return suspendkeyword.kotlin.SuspendKeywordKt.access$request(null, (Continuation) this);
+                }
+            };
+        }
+        $result = $continuation.result;
+        var10_4 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        switch ($continuation.label) {
+            case 0: {
+                ResultKt.throwOnFailure((Object) $result);
+                var2_5 = "Requesting...";
+                var3_6 = false;
+                System.out.println(var2_5);
+                $continuation.L$0 = url;
+                $continuation.label = 1;
+                v0 = DelayKt.delay(1000L, (Continuation) $continuation);
+                if (v0 == var10_4) {
+                    return var10_4;
+                }
+                **GOTO lbl25
+            }
+            case 1: {
+                var0 = (URL) $continuation.L$0;
+                ResultKt.throwOnFailure((Object) $result);
+                v0 = $result;
+                lbl25:
+                // 2 sources
+
+                var2_5 = var0;
+                var3_7 = Charsets.UTF_8;
+                var4_8 = false;
+                var5_9 = TextStreamsKt.readBytes((URL) var2_5);
+                return new String(var5_9, var3_7);
+            }
+        }
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+
+    public static /* synthetic */ void main(String[] args) {
+        suspendkeyword.kotlin.SuspendKeywordKt.main();
+    }
+
+    public static final /* synthetic */ Object access$request(URL url, Continuation $completion) {
+        return suspendkeyword.kotlin.SuspendKeywordKt.request(url, (Continuation<? super String>) $completion);
+    }
+}
