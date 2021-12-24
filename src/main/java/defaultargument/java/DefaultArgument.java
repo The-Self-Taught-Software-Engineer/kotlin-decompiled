@@ -1,13 +1,17 @@
-package namedarguments.java;
+package defaultargument.java;
 
 import dataclass.java.Search;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("ALL")
-public final class NamedArguments {
+public final class DefaultArgument {
     public static final void main() {
-        prepareSearch("Kotlin", true);
+        String query = "Kotlin";
+        Search search = new Search(query, null, 2, null);
+        System.out.println(search);
+        search = prepareSearch$default(query, false, 2, null);
+        System.out.println(search);
     }
 
     @NotNull

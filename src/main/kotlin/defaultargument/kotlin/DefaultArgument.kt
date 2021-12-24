@@ -1,9 +1,11 @@
-package namedarguments.kotlin
+package defaultargument.kotlin
 
 import dataclass.kotlin.Search
 
 fun main() {
-    prepareSearch(start = true, query = "Kotlin")
+    val query = "Kotlin"
+    println(Search(query))
+    println(prepareSearch(query))
 }
 
 fun prepareSearch(query: String, start: Boolean = false): Search {
