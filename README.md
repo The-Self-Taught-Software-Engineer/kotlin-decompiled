@@ -48,11 +48,12 @@ achieved mainly via front-end or back-end compiler steps:
 | Operator overloading               |           | ✅        |
 | Read-only collection               | ✅         |          |
 | `reified` keyword                  |           | ✅        |
-| `sealed` interface                 | ✅         |          |
+| Sealed interface                   | ✅         |          |
 | Secondary `constructor`            |           | ✅        |
 | String interpolation               |           | ✅        |
 | `suspend` keyword                  |           | ✅        |
 | `synchronized` keyword             |           | ✅        |
+| Top-level function                 |           | ✅        |
 | `tailrec` keyword                  |           | ✅        |
 | Try-Catch expression               |           | ✅        |
 | `typealias` keyword                | ✅         |          |
@@ -60,6 +61,18 @@ achieved mainly via front-end or back-end compiler steps:
 | Unsafe typecasting                 |           | ✅        |
 | Value class                        |           | ✅        |
 
-## Explanation
+## Most interesting examples
 
-N/A
+In a video on my channel, I looked at the most interesting of the above features to discuss how they were achieved in
+compiled code:
+
+- Local function
+- Named argument
+- Operator overloading
+- Iterate over range
+- Sealed interface
+- `reified` keyword
+- Top-level function
+- Value class
+
+**Video: N/A**
