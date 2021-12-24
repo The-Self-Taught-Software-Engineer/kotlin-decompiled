@@ -3,6 +3,8 @@
 (Almost) every single language construct of the Kotlin programming language compiled to JVM bytecode and then decompiled
 to Java again for better readability
 
+**Find my explanation of this below in video form**!
+
 ## Idea
 
 The point of this repository is to see quickly how Kotlin language features that seem to have no clear equivalent in
@@ -12,9 +14,51 @@ Resolve and enforce the language feature at hand in the front-end of the Kotlin 
 bytecode solely in the back-end to "emulate" the feature. Of course, for most features, a combination of both is used
 although at the same time, most features either rely more on front-end or back-end functionality respectively.
 
-## Most interesting examples
+## Language Features
 
-TBD
+In the following table, you'll find all the analyzed lanuage features together with a classification if they are
+achieved mainly via front-end or back-end compiler steps:
+
+| Feature                            | Front-End | Back-End |
+|------------------------------------|-----------|----------|
+| Companion object                   |           | ✅        |
+| `const` keyword                    |           | ✅        |
+| Data class                         |           | ✅        |
+| Default argument                   |           | ✅        |
+| Delegation                         |           | ✅        |
+| Destructuring declaration          |           | ✅        |
+| Elvis operator (`?:`)              |           | ✅        |
+| Extension function                 |           | ✅        |
+| Extension property                 |           | ✅        |
+| `if` expression                    |           | ✅        |
+| `infix` keyword                    |           | ✅        |
+| `init` block                       |           | ✅        |
+| `in` keyword                       |           | ✅        |
+| `inline` keyword                   |           | ✅        |
+| Iterate over range                 |           | ✅        |
+| Lambda labeling                    |           | ✅        |
+| `this` labeling                    |           | ✅        |
+| `lateinit` keyword                 |           | ✅        |
+| Local function                     |           | ✅        |
+| Named argument                     |           | ✅        |
+| Nullability ignore operator (`!!`) |           | ✅        |
+| Nullability operator (`?.`)        |           | ✅        |
+| Singleton object                   |           | ✅        |
+| Value object                       |           | ✅        |
+| Operator overloading               |           | ✅        |
+| Read-only collection               | ✅         |          |
+| `reified` keyword                  |           | ✅        |
+| `sealed` interface                 | ✅         |          |
+| Secondary `constructor`            |           | ✅        |
+| String interpolation               |           | ✅        |
+| `suspend` keyword                  |           | ✅        |
+| `synchronized` keyword             |           | ✅        |
+| `tailrec` keyword                  |           | ✅        |
+| Try-Catch expression               |           | ✅        |
+| `typealias` keyword                | ✅         |          |
+| Safe typecasting                   |           | ✅        |
+| Unsafe typecasting                 |           | ✅        |
+| Value class                        |           | ✅        |
 
 ## Explanation
 
