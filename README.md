@@ -16,63 +16,62 @@ although at the same time, most features either rely more on front-end or back-e
 
 ## Language Features
 
-In the following table, you'll find all the analyzed lanuage features together with a classification if they are
-achieved mainly via front-end or back-end compiler steps:
+In the following table, you'll find all the analyzed lanuage features:
 
-| Feature                            | Front-End | Back-End |
-|------------------------------------|-----------|----------|
-| Companion object                   |           | ✅        |
-| `const` keyword                    |           | ✅        |
-| Data class                         |           | ✅        |
-| Default argument                   |           | ✅        |
-| Delegation                         |           | ✅        |
-| Destructuring declaration          |           | ✅        |
-| Elvis operator (`?:`)              |           | ✅        |
-| Extension function                 |           | ✅        |
-| Extension property                 |           | ✅        |
-| `if` expression                    |           | ✅        |
-| `infix` keyword                    |           | ✅        |
-| `init` block                       |           | ✅        |
-| `in` keyword                       |           | ✅        |
-| `inline` keyword                   |           | ✅        |
-| Iterate over range                 |           | ✅        |
-| Lambda labeling                    |           | ✅        |
-| `this` labeling                    |           | ✅        |
-| `lateinit` keyword                 |           | ✅        |
-| Local function                     |           | ✅        |
-| Named argument                     |           | ✅        |
-| Nullability ignore operator (`!!`) |           | ✅        |
-| Nullability operator (`?.`)        |           | ✅        |
-| Singleton object                   |           | ✅        |
-| Value object                       |           | ✅        |
-| Operator overloading               |           | ✅        |
-| Read-only collection               | ✅         |          |
-| `reified` keyword                  |           | ✅        |
-| Sealed interface                   | ✅         |          |
-| Secondary `constructor`            |           | ✅        |
-| String interpolation               |           | ✅        |
-| `suspend` keyword                  |           | ✅        |
-| `synchronized` keyword             |           | ✅        |
-| Top-level function                 |           | ✅        |
-| `tailrec` keyword                  |           | ✅        |
-| Try-Catch expression               |           | ✅        |
-| `typealias` keyword                | ✅         |          |
-| Safe typecasting                   |           | ✅        |
-| Unsafe typecasting                 |           | ✅        |
-| Value class                        |           | ✅        |
+| Feature                            |
+|------------------------------------|
+| Companion object                   |
+| `const` keyword                    |
+| Data class                         |
+| Default argument                   |
+| Delegation                         |
+| Destructuring declaration          |
+| Elvis operator (`?:`)              |
+| Extension function                 |
+| Extension property                 |
+| `if` expression                    |
+| `infix` keyword                    |
+| `init` block                       |
+| `in` keyword                       |
+| `inline` keyword                   |
+| Iterate over range                 |
+| Lambda labeling                    |
+| `this` labeling                    |
+| `lateinit` keyword                 |
+| Local function                     |
+| Named argument                     |
+| Nullability ignore operator (`!!`) |
+| Nullability operator (`?.`)        |
+| Singleton object                   |
+| Value object                       |
+| Operator overloading               |
+| Read-only collection               |
+| `reified` keyword                  |
+| Sealed interface                   |
+| Secondary `constructor`            |
+| String interpolation               |
+| `suspend` keyword                  |
+| `synchronized` keyword             |
+| Top-level function                 |
+| `tailrec` keyword                  |
+| Try-Catch expression               |
+| `typealias` keyword                |
+| Safe typecasting                   |
+| Unsafe typecasting                 |
+| Value class                        |
 
 ## Most interesting examples
 
 In a video on my channel, I looked at the most interesting of the above features to discuss how they were achieved in
 compiled code:
 
+- Top-level function
+- `inline` keyword
 - Local function
-- Named argument
 - Operator overloading
+- Named argument
 - Iterate over range
 - Sealed interface
 - `reified` keyword
-- Top-level function
-- Value class
 
-**Video: N/A**
+Over here, you'll find the **[video](https://youtu.be/6pWXre4gDyM)**.
