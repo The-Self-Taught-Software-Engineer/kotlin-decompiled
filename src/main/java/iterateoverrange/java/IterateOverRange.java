@@ -5,15 +5,25 @@ import kotlin.internal.ProgressionUtilKt;
 @SuppressWarnings("ALL")
 public final class IterateOverRange {
     public static final void main() {
-        int n = 100;
-        int n2 = ProgressionUtilKt.getProgressionLastElement(100, 0, -5); // Last element in range
+        // Range
+        int n = 0;
+        do {
+            int x = n++;
+            boolean bl = false;
+            System.out.println(x);
+        } while (n <= 100);
+
+        // Progression
+        n = 100;
+        int n2 = ProgressionUtilKt.getProgressionLastElement(100, 0, -5);
         if (n2 <= n) {
             int x;
             do {
                 x = n;
                 n -= 5;
-                System.out.println(x); // Action in loop
-            } while (x != n2); // Loop condition
+                boolean bl = false;
+                System.out.println(x);
+            } while (x != n2);
         }
     }
 

@@ -13,16 +13,6 @@ public final class Velocity {
         this.y = y;
     }
 
-    public static /* synthetic */ Velocity copy$default(Velocity velocity, int n, int n2, int n3, Object object) {
-        if ((n3 & 1) != 0) {
-            n = velocity.x;
-        }
-        if ((n3 & 2) != 0) {
-            n2 = velocity.y;
-        }
-        return velocity.copy(n, n2);
-    }
-
     public final int getX() {
         return this.x;
     }
@@ -34,6 +24,16 @@ public final class Velocity {
     @NotNull
     public final Velocity times(int i) {
         return new Velocity(this.x * i, this.y * i);
+    }
+
+    public static /* synthetic */ Velocity copy$default(Velocity velocity, int n, int n2, int n3, Object object) {
+        if ((n3 & 1) != 0) {
+            n = velocity.x;
+        }
+        if ((n3 & 2) != 0) {
+            n2 = velocity.y;
+        }
+        return velocity.copy(n, n2);
     }
 
     public final int component1() {
