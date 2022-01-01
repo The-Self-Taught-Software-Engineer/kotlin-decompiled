@@ -3,7 +3,7 @@
 (Almost) every single language construct of the Kotlin programming language compiled to JVM bytecode and then decompiled
 to Java again for better readability
 
-**Find my explanation of this below in video form**!
+**Find my explanation of this below in [video form](https://youtu.be/6pWXre4gDyM)**!
 
 ## Idea
 
@@ -13,6 +13,16 @@ overcome this. Some are more straight forward, some less so. In any case, they u
 Resolve and enforce the language feature at hand in the front-end of the Kotlin compiler or do the conversion to
 bytecode solely in the back-end to "emulate" the feature. Of course, for most features, a combination of both is used
 although at the same time, most features either rely more on front-end or back-end functionality respectively.
+
+## Structure
+
+I created one example for each of the below language features, compiled that to JVM bytecode and then decompiled that again
+with [CFR](https://github.com/leibnitz27/cfr) to Java code (and cleaned it up a bit).
+You will find a directory in _both_, the [`kotlin`](src/main/kotlin) and the [`java`](src/main/java) directories for each feature
+that corresponds to each other. For instance: `src/main/kotlin/toplevelfunction` compiles to `src/main/java/toplevelfunction`.
+Sometimes, there are multiple files necessary to bring across the example, in which case you will find all of them in both again.
+Note that the output is sometimes not 100% representative of how the bytecode looked but in most examples (mainly apart from `suspendkeyword`),
+the output is pretty clear.
 
 ## Language Features
 
